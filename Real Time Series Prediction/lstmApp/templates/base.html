@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/icons/flags/flags.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">                        
+            <div class="header-left">
+                <a href="" class="logo">
+                    <h3>--sales </h3>
+                </a>
+                <a href="" class="logo logo-small">
+                    <p>sales</p>
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <a href="javascript:void(0);" id="toggle_btn">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <div class="top-nav-search">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <a class="mobile_btn" id="mobile_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">
+                            <span>Main Menu</span>
+                        </li>
+                        <li class="submenu active">
+                            <a href="#">
+                                <i class="feather-grid"></i> 
+                                <span> Dashboards </span> 
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="/" class="active">LSTM Dashboard</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+
+        {% block content %}
+        {% endblock content %}
+
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/feather.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/apexchart/apexcharts.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/apexchart/chart-data.js' %}"></script>
+    <script src="{% static 'assets/plugins/simple-calendar/jquery.simple-calendar.js' %}"></script>
+    <script src="{% static 'assets/js/calander.js' %}"></script>
+    <script src="{% static 'assets/js/circle-progress.min.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script src="{% static 'assets/graphs/client_dashboard.js' %}"></script>
+</body>
+</html>
