@@ -1,0 +1,7 @@
+keras==3.7.0
+matplotlib==3.9.2
+pandas==2.2.3
+scikit-learn==1.5.2
+scipy==1.14.1
+streamlit==1.40.2
+tensorflow==2.18.0
